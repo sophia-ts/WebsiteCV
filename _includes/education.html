@@ -1,0 +1,58 @@
+<div class="general">
+    <h3 class="career">Career Profile </h3>
+    <h6>{{ site.data.navigation.career}}</h6>
+
+    <div class="education">
+        <div class="shape1">
+            <h3>Education</h3>
+            {% assign education = site.data.navigation.edu-info %}
+        
+        
+            {%for edu in education %}
+                <h4>{{ edu.education }}</h4>
+                <p>{{ edu.university }}</p>
+                <p>{{ edu.years }}</p>
+            {% endfor %}
+        </div>
+        <div class="shape2">
+            <h3>Languages</h3>
+                {% assign languages = site.data.navigation.languages %}
+        
+                <p>{%for language in languages %}</p>
+                    {{ language.idiom }}
+                    <span class="lang-desc">({{ language.level }})</span>
+                {% endfor %}
+        </div>
+    </div>
+    <br>
+    <h3>Experience</h3>
+    {% assign experience = site.data.navigation.experience %}
+    <section>
+        {%for exp in experience %}
+        <h4> {{ exp.title }}</h4>
+        <h6>{{ exp.company }}</h6>
+        <h6> {{ exp.years }}</h6>
+        {% if exp.link %}
+            <a class="links" href="{{ exp.link }}" target="_blank" >Website</a>
+        {% endif %}
+        <h6>{{exp.description}}</h6>
+        {% endfor %}
+    </section>
+    <br>
+
+    <h3>Volunteering</h3>
+    {% assign volunteering = site.data.navigation.volunteering %}
+    <section>
+        {%for vol in volunteering %}
+        <h4> {{ vol.title }}</h4>
+        <h6>{{ vol.position }}</h6>
+        <h6>{{ vol.years }}</h6>
+        {% if vol.link %}
+            <a class="links" href="{{ vol.link }}" target="_blank" >Website</a>
+        {% endif %}
+        <h6>{{vol.description}}</h6>
+        
+        {% endfor %}
+    </section>
+
+</div>

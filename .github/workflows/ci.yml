@@ -1,14 +1,18 @@
-name: Jekyll site CI
+name: Jekyll CI
 
 on:
   push:
+#select branches or files that trigger the ci
     branches: [ main ]
+
+#select braches that will change on pull request
   pull_request:
     branches: [ main ]
 
 jobs:
   build:
 
+#os that will run
     runs-on: ubuntu-latest
 
     steps:

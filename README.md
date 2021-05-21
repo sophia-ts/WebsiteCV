@@ -2,10 +2,6 @@
 
 **link:** [jekyll-cv](https://brave-swanson-35c9b6.netlify.app/)
 
-## Preview
-
-![](./cv.png) 
-
 ## Οδηγίες εγκατάστασης locally στον υπολογιστή
 
 1. Clone το repository
